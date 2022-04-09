@@ -1,5 +1,8 @@
 # pokemon-app
 
+About
+a little pokemon searcher using vue 3 to learn about the composition API and reactivity
+
 ## Project setup
 ```
 npm install

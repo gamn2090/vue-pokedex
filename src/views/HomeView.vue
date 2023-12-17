@@ -46,11 +46,7 @@ export default {
     fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=2000")
       .then((res)=> res.json())
       .then((data)=> {
-        console.log(data)
-        state.pokemons = data.results;
-        // state.urlIdLooUp = data.results.reduce((acc, cur, idx)=>          
-        //   acc= {...acc, [cur.name]:[cur.url]}
-        // ,{})
+        state.pokemons = data.results;        
         state.urlIdLooUp = data.results.reduce((acc, cur, idx) => {
           // Extraer el ID del URL utilizando expresiones regulares
           const realId = cur.url.match(/\/pokemon\/(\d+)\/$/);
